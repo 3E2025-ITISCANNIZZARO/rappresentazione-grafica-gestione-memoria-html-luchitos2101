@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione della Memoria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .memory {
+            width: 300px;
+            height: 500px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+        }
+        .segment {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        .text { background-color: #ff5733; }
+        .data { background-color: #33aaff; }
+        .heap { background-color: #33cc33; }
+        .stack { background-color: #aa33ff; }
+        .legend {
+            margin-top: 20px;
+        }
+        .legend div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rappresentazione Grafica della Memoria</h1>
+    <div class="memory">
+        <div class="segment text">Text Segment</div>
+        <div class="segment data">Data Segment</div>
+        <div class="segment heap">Heap</div>
+        <div class="segment stack">Stack</div>
+    </div>
+    <div class="legend">
+        <h2>Legenda</h2>
+        <div><div class="color-box" style="background-color: #ff5733;"></div>Text Segment - Codice eseguibile</div>
+        <div><div class="color-box" style="background-color: #33aaff;"></div>Data Segment - Variabili globali e statiche</div>
+        <div><div class="color-box" style="background-color: #33cc33;"></div>Heap - Memoria allocata dinamicamente</div>
+        <div><div class="color-box" style="background-color: #aa33ff;"></div>Stack - Chiamate alle funzioni e variabili locali</div>
+    </div>
+</body>
+</html>
